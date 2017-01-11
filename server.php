@@ -1,13 +1,13 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once '../WebWorker-swoole/App.php';
 
 //加载配置文件
 define("WebWorker_RUN",getenv("WebWorker_RUN"));
 if ( WebWorker_RUN == "production" ) {
     require_once __DIR__ . '/config/config_production.php';
-}else if ( WORKERMAN_RUN == "testing" ) {
+}else if ( WebWorker_RUN == "testing" ) {
     require_once __DIR__ . '/config/config_testing.php';
-}else if ( WORKERMAN_RUN == "development"  ) {
+}else if ( WebWorker_RUN == "development"  ) {
     require_once __DIR__ . '/config/config_development.php';
 }else {
     require_once __DIR__ . '/config/config_production.php';
