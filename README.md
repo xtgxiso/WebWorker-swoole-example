@@ -1,6 +1,5 @@
 # WebWorker-swoole-example
 ========
-
 基于WebWorker-swoole写的一个简单的参考示例，大家可以根据这个示例自由修改
 
 安装
