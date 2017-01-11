@@ -2,3 +2,4 @@ _alidata_xtgxiso_WebWorker-swoole-example_server.php.pid
 composer.json
 composer.lock
 vendor
+WebWorker.log
