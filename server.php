@@ -1,7 +1,22 @@
 <?php
 require_once 'vendor/autoload.php';
 
+//加载配置文件
+define("WebWorker_RUN",getenv("WebWorker_RUN"));
+if ( WebWorker_RUN == "production" ) {
+    require_once __DIR__ . '/config/config_production.php';
+}else if ( WORKERMAN_RUN == "testing" ) {
+    require_once __DIR__ . '/config/config_testing.php';
+}else if ( WORKERMAN_RUN == "development"  ) {
+    require_once __DIR__ . '/config/config_development.php';
+}else {
+    require_once __DIR__ . '/config/config_production.php';
+}
+
 $http = new WebWorker\App('0.0.0.0',1215);
+
+$http->config = $config;
+
 //进程名字
 $http->name = "xtgxiso";
 //工作进程数量
