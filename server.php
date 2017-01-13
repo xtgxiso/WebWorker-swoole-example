@@ -1,5 +1,5 @@
 <?php
-require_once '../WebWorker-swoole/App.php';
+require_once 'vendor/autoload.php';
 
 //加载配置文件
 define("WebWorker_RUN",getenv("WebWorker_RUN"));
