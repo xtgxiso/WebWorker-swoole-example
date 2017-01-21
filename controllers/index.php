@@ -1,7 +1,7 @@
 <?php
 
 $http->AddFunc("/test",function() {
-    $redis->set("xtgxiso",time());
+    $this->redis->set("xtgxiso",time());
 });
 
 
