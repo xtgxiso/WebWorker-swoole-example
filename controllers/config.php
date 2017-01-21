@@ -1,4 +1,4 @@
 <?php
-$http->HandleFunc("/config/show",function() {
-    $this->ServerJson($this->config);
+$http->HandleFunc("/config/show",function() use($config) {
+    $this->ServerJson($config);
 });
