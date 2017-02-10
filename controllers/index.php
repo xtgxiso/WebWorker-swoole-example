@@ -1,5 +1,10 @@
 <?php
 
+$http->AddFunc("/",function() {
+    $this->ServerHtml("你好");
+});
+
+
 $http->AddFunc("/test",function() {
     $this->redis->set("xtgxiso",time());
 });
